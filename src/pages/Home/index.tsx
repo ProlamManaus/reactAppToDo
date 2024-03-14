@@ -128,10 +128,10 @@ export function Home(): JSX.Element {
 
         {students.map((student, index) => (
           <div key={index} className="tableContainer">
-            <Card name={student.name}></Card>
+            <Card name={student.name} time=""></Card>
             <div className="containerHomeDiv200">
               <div className="containerHomeDiv300">
-                <Card name={student.time}></Card>
+                <Card name="" time={student.time}></Card>
               </div>
               <button
                 className="buttonDelete"
@@ -160,4 +160,3 @@ export function Home(): JSX.Element {
     </>
   )
 }
-

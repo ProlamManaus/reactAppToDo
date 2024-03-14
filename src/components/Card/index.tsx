@@ -3,14 +3,14 @@ import './styles.css'
 interface CardProps {
   name: string
   time: string
-  children?: React.ReactNode
+  // children?: React.ReactNode
 }
 // export function Card({props}) {
 // export function Card({ name, time }: CardProps) {
 export function Card({
   name,
   time,
-  children,
+  // children,
 }: CardProps): JSX.Element {
   return (
     <>
