@@ -1,0 +1,52 @@
+SELECT * FROM aluno
+SELECT nome, responsavel FROM aluno
+SELECT nome FROM aluno WHERE matricula = 1
+SELECT nome, matricula FROM aluno WHERE matricula > 1
+SELECT nome, matricula FROM aluno WHERE matricula < 2
+SELECT nome, matricula FROM aluno WHERE matricula >= 1
+SELECT nome, matricula FROM aluno WHERE matricula <= 1
+SELECT nome, matricula FROM aluno WHERE matricula <> 1
+SELECT nome, matricula FROM aluno WHERE matricula != 1
+SELECT nome, matricula FROM aluno WHERE matricula = 2+1
+SELECT nome, matricula FROM aluno WHERE matricula = 2-1
+SELECT nome, matricula FROM aluno WHERE matricula = 3*1
+SELECT nome, matricula FROM aluno WHERE matricula = 4/2
+SELECT nome, matricula FROM aluno WHERE nome like 'J%' AND matricula >= 2 
+SELECT nome, matricula FROM aluno WHERE nome like 'J%' AND matricula < 2
+SELECT nome, matricula FROM aluno WHERE nome like 'J%' AND matricula < 2
+SELECT * FROM aluno WHERE nome like 'J%'
+SELECT * FROM aluno WHERE nome like '%G%'
+SELECT nome FROM aluno WHERE nome like '%G%'
+SELECT nome, cpf FROM aluno WHERE cpf = 45678945645
+SELECT nome, cpf FROM aluno WHERE nome like 'Jakeliny Gracielly'
+SELECT nome, cpf FROM aluno WHERE responsavel like 'Josefina Gracielly'
+SELECT nome, cpf FROM aluno WHERE responsavel like 'Josefina Gra%'
+SELECT nome, cpf FROM aluno WHERE matricula NOT IN ( 1, 4 )
+
+SELECT * FROM professor
+SELECT materia, cpf, nome FROM professor
+
+SELECT * FROM aulas
+
+SELECT * FROM funcionarios
+
+SELECT nome, cpf FROM funcionarios WHERE id_funcionario NOT IN ( 1, 4 )
+SELECT nome, cpf FROM funcionarios WHERE id_funcionario IN ( 1, 4 )
+
+SELECT nome, cpf FROM funcionarios WHERE id_departamento is NULL
+SELECT nome, cpf FROM funcionarios WHERE id_departamento is NOT NULL
+
+
+SELECT * FROM aluno
+
+INSERT INTO aluno (nome, cpf, responsavel) VALUES ('Marcell Souza', 11122233344, 'Vera Lucia')
+
+UPDATE aluno SET nome='Pedro Henrique', responsavel='Marcell Souza' WHERE matricula = 3
+UPDATE aluno SET nome='Hadassa Souza', responsavel='Marcell Souza', cpf=55500022255 WHERE matricula = 2
+UPDATE aluno SET cpf=44477799911 WHERE matricula = 1
+
+DELETE FROM aluno WHERE matricula = 1
+
+
+
+

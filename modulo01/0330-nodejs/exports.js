@@ -1,0 +1,1 @@
+module.exports = "Prolam: module.exports"
