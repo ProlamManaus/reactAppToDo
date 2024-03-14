@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Espaçamento entre os elementos da galeria */
+  margin: 40px;
+}
+
+.photo {
+  width: calc(
+    (100% - 2.4rem) / 3
+  ); /* Calcula a largura das fotos considerando o espaçamento entre elas */
+  height: 170px; /* Altura fixa das fotos */
+  border: 1px solid red;
+  margin-bottom: 0.8rem; /* Espaçamento abaixo de cada foto */
+}

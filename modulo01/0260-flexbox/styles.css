@@ -1,0 +1,245 @@
+.flexbox1 {
+  display: flex;
+
+  /* espacos homogeneos entre eles */
+  /* justify-content: space-around;  */
+
+  flex-direction: column;
+}
+
+/* .item:nth-child(1) {
+  order: 1;
+} */
+
+.container1 {
+  display: flex;
+
+  justify-content: flex-end;
+
+  flex-direction: column;
+  /* height: 100vh; - para pegar o tamanho total da pagina */
+  height: 100vh;
+}
+
+.container2 {
+  display: flex;
+  border: 1px solid red;
+  /* height: 200px; */
+  height: 50vh;
+
+  /* margin: 10px; */
+}
+
+.item2 {
+  background-color: gray;
+  border: 1px solid;
+  flex: 1;
+}
+
+.container3 {
+  display: flex;
+
+  // flex-direction: row; /* por padrao e horizontal */
+  // flex-direction: row-reverse;
+
+  flex-direction: column;
+  flex-direction: column-reverse;
+  height: 70vh;
+}
+
+.box2 {
+  display: flex;
+  /* flex-wrap: wrap-reverse; */
+  flex-wrap: wrap; /* se passar cria linha abaixo */
+
+  /* justify-content: center; */
+  /* justify-content: flex-end; */
+
+  border: 1px dashed red;
+}
+.box2 div {
+  border: 1px solid;
+  width: 300px; /* nao emporta o valor 90000, vai se encaixar na tela */
+}
+
+.box3 {
+  display: flex;
+  /* flex-wrap: wrap-reverse; */
+  //flex-wrap: wrap; /* se passar cria linha abaixo */
+  /* flex-wrap: nowrap;  */
+
+  /* flex-flow: wrap; */
+  /* flex-flow: column wrap; */ /* flex-flow pode usar duas propriedades */
+  /* flex-flow: row wrap; */
+
+  flex-direction: column;
+
+  /* por padrao (inicio) */
+  /* justify-content: flex-start; */
+
+  /* para o final */
+  /* justify-content: flex-end; */
+
+  /* centralizar */
+  /* justify-content: center; */
+
+  /* espacos por igual em todos elementos, */
+  /* dos lados (metade no inicio e no final) */
+  /* justify-content: space-around; */
+
+  /* espacos por igual ao dos lados (menos no inicio e no final */
+  /* justify-content: space-between; */
+
+  /* todos os espacos sao iguais entre eles (centralizado)*/
+  justify-content: space-evenly;
+
+  border: 1px dashed red;
+}
+.box4 div {
+  border: 1px solid;
+  /* width: 120px; */
+  /* height: 50px; */
+}
+
+.box9 {
+  display: flex;
+  justify-content: space-around;
+
+  border: 1px dashed red;
+}
+
+/* flex-basic */
+.box5 {
+  display: flex;
+
+  /* automaticamente vira altuara */
+  flex-direction: column;
+
+  border: 1px dashed red;
+
+  /* gap: 20px; */
+  /* gap: 10%; */
+  /* gap: 10%; */
+}
+.box5 div {
+  border: 1px solid;
+  /* width: 120px; */
+  /* height: 50px; */
+  /* flex-basis: auto; */
+
+  /* espaco no lado direito */
+  /* flex-basis: 15%; */
+  flex-basis: 50px;
+}
+
+/* para funcionar tem que estar assim: flex-basis: auto */
+/* Individual de cada area */
+.box5 div:nth-child(1) {
+  width: 100px;
+}
+
+/* flex-grow */
+.box6 {
+  display: flex;
+  border: 1px dashed red;
+}
+.box6 div {
+  border: 1px solid;
+}
+/* a terceira posicao ocupa toda a largura */
+/* dividi e distribui para as demais nth-child (2) (3)*/
+.box6 div:nth-child(2),
+.box6 div:nth-child(3) {
+  /* Não faz nada */
+
+  /* pega todo o espaco disponivel na linha e usa na posicao indicada */
+  flex-grow: 1;
+}
+.box6 div:nth-child(1) {
+  /* pega 3 frações de espaco e disponibiliza para child(1) */
+  flex-grow: 3;
+}
+
+/* */
+.box7 {
+  display: flex;
+  border: 1px dashed red;
+}
+.box7 div {
+  border: 1px solid;
+
+  /* 40px para todas as areas */
+  flex: 0 40px;
+
+  /* ocupa todo o espaco, divido entre as areas */
+  /* flex: 1; */
+
+  /* 1 2 3 */
+  /* 1 flex-grow */
+  /* 2 flex-shrink */
+  /* 3 flex-basic */
+}
+
+/* exemplos */
+.page1 {
+  border: 2px solid;
+  min-height: 95vh;
+
+  display: flex;
+}
+
+aside {
+  background: lightgreen;
+  flex: 1;
+}
+
+main {
+  background: lightblue;
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-child(1) {
+  background: lightgoldenrodyellow;
+  flex: 2;
+}
+
+main section:nth-child(2) {
+  background: lightsalmon;
+  /* flex: 1; */
+  flex: 0 120px;
+}
+
+main section:nth-child(3) {
+  flex: 1;
+
+  background: lightpink;
+}
+
+/* ordeer */
+.box {
+  display: flex;
+  border: 1px dashed red;
+}
+
+.box div:nth-child(1) {
+  background: red;
+  order: 1;
+}
+
+.box div:nth-child(2) {
+  background: yellow;
+  order: 20;
+}
+
+.box div:nth-child(3) {
+  background: green;
+  order: 0;
+}
+
+.box div:nth-child(4) {
+  background: blue;
+  order: -1;
+}

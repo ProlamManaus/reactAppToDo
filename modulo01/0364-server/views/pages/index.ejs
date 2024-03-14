@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<%- include('../partials/head'); %>
+  <body class="container">
+    <%- include('../partials/header'); %>
+      <main>
+        <div>
+          <h1>Node EJS</h1>
+          <p>Aprender EJS</p>
+          <P>
+            <%= subtitle %>
+          </P>
+        </div>
+        <ul>
+          <!-- <li><strong>Titulo 1 </strong>teste</li>
+          <li><strong>Titulo 2 </strong>teste</li>
+          <li><strong>Titulo 3 </strong>teste</li>
+          <li><strong>Titulo 4 </strong>teste</li> -->
+          <% qualitys.forEach(function(quality){ %>
+            <li>
+              <strong>
+                <%= quality.title %>
+              </strong>
+              <%= quality.message %>
+            </li>
+            <% })%>
+              %>
+        </ul>
+      </main>
+      <%- include('../partials/footer'); %>
+  </body>
+  </html>
