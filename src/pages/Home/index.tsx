@@ -115,8 +115,8 @@ export function Home(): JSX.Element {
 
         <input
           type="text"
-          maxLength={27}
-          placeholder="Digite sua tarefa..."
+          maxLength={25}
+          placeholder="Digite Sua Tarefa..."
           value={studentName}
           onChange={(e) => setStudentName(e.target.value)}
         />
@@ -127,6 +127,7 @@ export function Home(): JSX.Element {
         >
           Adicionar Tarefa
         </button>
+      
 
         {students.map((student, index) => (
           <div key={index} className="tableContainer">
