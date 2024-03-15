@@ -115,7 +115,7 @@ export function Home(): JSX.Element {
 
         <input
           type="text"
-          maxLength={25}
+          maxLength={27}
           placeholder="Digite sua tarefa..."
           value={studentName}
           onChange={(e) => setStudentName(e.target.value)}
