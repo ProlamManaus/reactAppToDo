@@ -5,8 +5,8 @@
 }
 
 .containerHome header {
-  width: 50%;
-  margin: 30px 0 24px;
+  width: 90%;
+  margin: 12px 0 10px;
 
   display: flex;
   justify-content: space-between;
@@ -14,55 +14,59 @@
 }
 
 .containerHome header img {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   border-radius: 30px;
   margin-left: 7px;
+  border: 3.1px solid #DA70D6;
 }
 
 .containerHome header div {
   display: flex;
+  align-items: c enter;
+}
+
+.tamanhoNome {
+  font-size:12px;
+  padding: 12px 0 0px;
+
+  display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .containerHome input {
-  width: 50%;
-  padding: 16px;
+  width: 90%;
+  padding: 10px;
 
   background: #e6e6e6;
   border-radius: 5px;
   border: none;
 
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .buttonAdd {
-  width: 50%;
-  padding: 16px;
+  width: 90%;
+  padding: 10px;
   font-weight: 700;
 
   background: #ea4c89;
   color: #ffffff;
 
   border-radius: 5px;
-  margin: 12px 0 30px;
+  margin: 8px 0 15px;
   border: none;
 
   cursor: pointer;
   transition: filter 0.5s;
 
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .buttonAdd:hover {
   filter: brightness(0.9);
 }
-
-/* .card-container { */
-/* display: flex; */
-/* align-items: center; */
-/* justify-content: space-between; */
-/* } */
 
 .deletexxbutton {
   width: 55px;
@@ -100,17 +104,17 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 50%;
-  padding: 3px 10px 3px 12px;
+  width: 90%;
+  padding: 3px 3px 3px 12px;
 
   background: #ff4500;
   color: #ffffff;
 
   border-radius: 5px;
-  margin: 0 0 7px 0;
+  margin: 0 0 5px 0;
   border: none;
 
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .containerHomeDiv200 {
@@ -118,11 +122,10 @@
   align-items: center;
 }
 
-
 .containerHomeDiv300 {
-  padding: 0 10px 0 0;
+  padding: 0 5px 0 0;
   font-size: 10px;
-  margin: 7px 0 11px 0;
+  margin: 5px 0 8px 0;
 }
 
 .buttonDelete {
@@ -142,7 +145,7 @@
 }
 
 .tamanhoHora {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .tamanhoHoraT {

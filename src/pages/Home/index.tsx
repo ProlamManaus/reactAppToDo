@@ -81,7 +81,7 @@ export function Home(): JSX.Element {
       <div className="containerHome">
         <header>
           <div className="tamanhoHoraT">
-            <h1>Prolam</h1>
+            <h2>Note Pad</h2>
             <div className="tamanhoHora">
               <strong>
                 {year}.{month}
@@ -91,17 +91,32 @@ export function Home(): JSX.Element {
             </div>
           </div>
           <div>
-            <strong>{user.name}</strong>
-            <img
-              src={user.avatar}
-              alt="foto perfil github"
-            />
+            <a
+              href="https://www.linkedin.com/in/marcellsouza"
+              target="_blank"
+            >
+              <div className="tamanhoNome">
+                <strong>By 💜</strong>
+                <strong>Marcell</strong>
+                {/* <strong className="tamanhoNome">by {user.name}</strong> */}
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/marcellsouza"
+              target="_blank"
+            >
+              <img
+                src={user.avatar}
+                alt="foto perfil github"
+              />
+            </a>
           </div>
         </header>
 
         <input
           type="text"
-          placeholder="Input your task"
+          maxLength={25}
+          placeholder="Digite sua tarefa..."
           value={studentName}
           onChange={(e) => setStudentName(e.target.value)}
         />
@@ -110,21 +125,8 @@ export function Home(): JSX.Element {
           type="button"
           onClick={handleAddStudent}
         >
-          To Add
+          Adicionar Tarefa
         </button>
-
-        {/* {students.map((student, index) => (
-          <div key={index}>
-            <Card name={student.name} time={student.time}>
-              <button
-                type="button"
-                onClick={() => handleDeleteStudent(index)}
-              >
-                ❌1
-              </button>
-            </Card>
-          </div>
-        ))} */}
 
         {students.map((student, index) => (
           <div key={index} className="tableContainer">
@@ -143,19 +145,6 @@ export function Home(): JSX.Element {
             </div>
           </div>
         ))}
-
-        {/* {students.map((student, index) => (
-          <div key={index} className="card-container">
-            <Card name={student.name} time={student.time} />
-            <button
-              className="buttonDelete"
-              type="button"
-              onClick={() => handleDeleteStudent(index)}
-            >
-              Del
-            </button>
-          </div>
-        ))} */}
       </div>
     </>
   )
